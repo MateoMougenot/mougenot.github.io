@@ -2,7 +2,6 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import '../styles/homepage.css';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -11,35 +10,34 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body class="bg-zinc-900 text-white font-sans">
     <Header />
-    <main class="homepage">
-      <section class="homepage__intro">
-        <div class="homepage__intro-content">
-          <h1 class="homepage__title">Salut, moi c’est Matéo 👋</h1>
-          <p class="homepage__subtitle">
+    <main class="px-6 py-12 max-w-7xl mx-auto">
+      <section class="flex flex-col md:flex-row items-center gap-12 mb-24">
+        <div class="flex-1">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Salut, moi c’est Matéo 👋</h1>
+          <p class="text-lg md:text-xl text-zinc-300 mb-6">
             Étudiant en MMI, passionné par la création numérique, le design et le développement web. Bienvenue sur mon portfolio !
           </p>
-          <a href="#projects" class="homepage__cta">Découvrir mes projets</a>
+          <a href="/blog" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded-xl transition">
+            Découvrir mes projets
+          </a>
         </div>
-        <div class="homepage__intro-image">
-          <img src="/Avatar.png" alt="Portrait de Matéo" />
+        <div class="flex-1">
+          <img src="/Avatar.png" alt="Portrait de Matéo" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover mx-auto shadow-lg" />
         </div>
       </section>
 
-      <section id="projects" class="homepage__projects">
-        <h2 class="homepage__section-title">Mes projets récents</h2>
-        <div class="homepage__project-list">
-			<a href="/blog/graphisme">
-				<article class="project-card">
-					<h3 class="project-card__title">Création de doodle</h3>
-					<p class="project-card__description">Un petit descriptif du projet réalisé en graphisme.</p>
-				  </article>
-			</a>
-          
-          <article class="project-card">
-            <h3 class="project-card__title">Projet 2</h3>
-            <p class="project-card__description">Projet de data visualisation avec mise en valeur d’un message.</p>
+      <section id="projects" class="mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8">Mes projets récents</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <a href="/blog/graphisme" class="block bg-zinc-800 hover:bg-zinc-700 p-6 rounded-xl shadow-md transition">
+            <h3 class="text-xl font-semibold mb-2">Création de doodle</h3>
+            <p class="text-zinc-300">Un petit descriptif du projet réalisé en graphisme.</p>
+          </a>
+          <article class="bg-zinc-800 hover:bg-zinc-700 p-6 rounded-xl shadow-md transition">
+            <h3 class="text-xl font-semibold mb-2">Projet 2</h3>
+            <p class="text-zinc-300">Projet de data visualisation avec mise en valeur d’un message.</p>
           </article>
           <!-- Ajoute plus de projets ici -->
         </div>

@@ -1,62 +1,156 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+
+// Définition explicite de la date pour éviter l'erreur toISOString()
+const pubDate = new Date('2025-04-13T12:00:00Z');
 ---
 
 <Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage="/blog-placeholder-about.jpg"
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+  pubDate={pubDate}
+  <header class="py-16 px-6 max-w-5xl mx-auto">
+    <h1 class="text-4xl font-bold mb-4">À propos de moi</h1>
+    <div class="h-1 w-60 bg-indigo-600 mb-8"></div>
+  </header>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+  <div class="max-w-5xl mx-auto px-6 pb-20">
+    <div class="flex flex-col md:flex-row gap-12 mb-16">
+      <div class="md:w-2/3">
+        <h2 class="text-3xl font-bold mb-6">Bonjour, je suis Matéo Mougenot 👋</h2>
+        <p class="text-xl mb-6">
+          Graphiste et créateur de contenu junior, diplômé en Métiers du Multimédia et de l'Internet, passionné par le design numérique et l'innovation.
+        </p>
+        <p class="mb-6">
+          Mon objectif est de transformer des idées en visuels puissants et de raconter des histoires à travers la création visuelle. Je combine créativité et technique pour concevoir des expériences utilisateur captivantes.
+        </p>
+        <a href="/contact" class="inline-block bg-indigo-600 hover:bg-indigo-700 font-medium py-3 px-6 rounded-md transition-colors duration-300">
+          Me contacter
+        </a>
+      </div>
+      <div class="md:w-1/3">
+        <div class="rounded-full overflow-hidden bg-blue-300 w-64 h-64 mx-auto">
+          <img src="/Avatar.png" alt="Matéo Mougenot" class="w-full h-full object-cover" onerror="this.src='/api/placeholder/400/400'; this.alt='Photo de profil';">
+        </div>
+      </div>
+    </div>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+    <section class="mb-16 bg-gray-900 rounded-lg p-8">
+      <h2 class="text-2xl font-bold mb-6">Mon parcours</h2>
+      <p class="mb-4">
+        Je suis diplômé en Métiers du Multimédia et de l'Internet, une formation où j'ai pu développer mes compétences dans différents domaines du numérique. Cette polyvalence me permet aujourd'hui d'avoir une vision globale des projets sur lesquels je travaille.
+      </p>
+      <p class="mb-4">
+        Tout au long de ma formation, j'ai développé une passion pour le design graphique, la création de contenus interactifs et la conception de sites web. En parallèle de mes études, j'ai travaillé sur des projets variés, ce qui m'a permis de renforcer mes compétences et d'explorer de nouveaux horizons créatifs.
+      </p>
+      <p>
+        Depuis que j'ai commencé ma carrière, j'ai eu l'occasion de travailler sur des projets de branding, de création d'identités visuelles, ainsi que sur des sites web interactifs. Je me spécialise également dans la visualisation de données, où je peux allier ma passion pour l'art et mon sens analytique.
+      </p>
+    </section>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+    <section class="mb-16 bg-gray-900 rounded-lg p-8">
+      <h2 class="text-2xl font-bold mb-6">Mon approche</h2>
+      <p class="mb-4">
+        Chaque projet est pour moi une opportunité d'apprendre et d'innover. J'accorde une attention particulière à l'esthétique et à l'expérience utilisateur, tout en veillant à ce que mes créations soient à la fois fonctionnelles et visuellement attrayantes.
+      </p>
+      <p>
+        Je suis également très attaché aux principes de minimalisme, cherchant à simplifier l'expérience tout en conservant un impact visuel. En tant que jeune créatif, je suis constamment en quête de nouvelles inspirations et de défis qui me permettent de repousser mes limites.
+      </p>
+    </section>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
+    <section class="mb-16 bg-gray-900 rounded-lg p-8">
+      <h2 class="text-2xl font-bold mb-6">Compétences</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Design</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <span class="mr-2">•</span>
+              <span>UI/UX Design</span>
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2">•</span>
+              <span>Identité visuelle</span>
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2">•</span>
+              <span>Design responsive</span>
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2">•</span>
+              <span>Prototypage</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Développement</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <span class="mr-2">•</span>
+              <span>HTML/CSS/JavaScript</span>
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2">•</span>
+              <span>Frameworks modernes (React, Astro)</span>
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2">•</span>
+              <span>Intégration responsive</span>
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2">•</span>
+              <span>Optimisation performance</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16 bg-gray-900 rounded-lg p-8">
+      <h2 class="text-2xl font-bold mb-6">Ce que j'aime</h2>
+      <ul class="space-y-3">
+        <li class="flex items-start">
+          <span class="mr-3">•</span>
+          <span>Explorer de nouvelles technologies et techniques créatives</span>
+        </li>
+        <li class="flex items-start">
+          <span class="mr-3">•</span>
+          <span>Collaborer avec des équipes pour créer des projets innovants</span>
+        </li>
+        <li class="flex items-start">
+          <span class="mr-3">•</span>
+          <span>Analyser et transformer des données en visuels compréhensibles</span>
+        </li>
+        <li class="flex items-start">
+          <span class="mr-3">•</span>
+          <span>Partager mes connaissances avec d'autres créatifs et développeurs</span>
+        </li>
+        <li class="flex items-start">
+          <span class="mr-3">•</span>
+          <span>La photographie et le cinéma, qui nourrissent ma vision artistique</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="text-center p-8 bg-gray-900 rounded-lg">
+      <h2 class="text-2xl font-bold mb-6">Prêt à collaborer ensemble ?</h2>
+      <p class="text-lg mb-8">
+        Si vous êtes intéressé par un projet ou souhaitez en savoir plus sur mon travail, n'hésitez pas à me contacter. Je serai ravi d'échanger avec vous !
+      </p>
+      <div class="flex justify-center gap-4">
+        <a href="/contact" class="bg-indigo-600 hover:bg-indigo-700 font-medium py-3 px-6 rounded-md transition-colors duration-300">
+          Me contacter
+        </a>
+        <a href="/projets" class="bg-gray-800 hover:bg-gray-700 font-medium py-3 px-6 rounded-md transition-colors duration-300">
+          Voir mes projets
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <footer class="border-t border-gray-800 mt-16 py-8">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <p>© 2025 Matéo Mougenot. Tous droits réservés.</p>
+    </div>
+  </footer>
 </Layout>
